@@ -1,0 +1,20 @@
+htlm {
+  font-size: 62.5%;
+}
+
+@import "partials/variables";
+@import "partials/mixins";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/body";
+
+.global-container {
+	width: 100vw;
+	display: grid;
+	grid-template-columns: repeat(12, auto);
+	grid-template-rows: repeat(3, auto);
+	grid-template-areas:
+	'h h h h h h h h h h h h'
+	'm m m m m m m m m m m m'
+	'f f f f f f f f f f f f';
+}

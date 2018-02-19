@@ -1,0 +1,46 @@
+.footer {
+  grid-area: f;
+  background: #4A4A4A;
+  width: $container-size;
+  &__content {
+    width: $content-size;
+    margin: auto;
+    &__title {
+      text-align: center;
+      color: $light-color;
+      margin: 7% 0;
+      font-family: montserrat-regular;
+      font-size: 1.1rem;
+    }
+    &__list {
+      display: flex;
+      margin: auto;
+      width: $container-size;
+      justify-content: space-around;
+      width: 70%;
+      &__item {
+        width: $quarter-size;
+        text-align: center;
+        &__icon {
+          width: 60%;
+        }
+      }
+    }
+    &__newsletter{
+      text-align: center;
+      margin: 8% 0;
+      font-family: montserrat-regular;
+      font-size: 1.2rem;
+      &__link {
+        color: $main-color;
+      }
+    }
+    &__credit {
+      text-align: center;
+      color: $light-color;
+      margin: 5% 0;
+      font-family: montserrat-regular;
+      font-size: 1rem;
+    }
+  }
+}

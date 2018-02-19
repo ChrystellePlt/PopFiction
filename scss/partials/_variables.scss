@@ -1,0 +1,36 @@
+// === COLORS ===
+$main-color: #FDC00C;
+$secondary-color: #191919;
+$ternary-color: #4A4A4A;
+$light-color: #fff;
+$night-color: #000;
+
+
+// === FONTS ===
+@font-face {
+  font-family: "montserrat-light";
+  src: url("fonts/Montserrat-Light.otf");
+}
+@font-face {
+  font-family: "montserrat-regular";
+  src: url("fonts/Montserrat-Regular.otf");
+}
+@font-face {
+  font-family: "montserrat-bold";
+  src: url("fonts/Montserrat-Bold.otf");
+}
+@font-face {
+  font-family: "montserrat-italic";
+  src: url("fonts/Montserrat-MediumItalic.otf");
+}
+$text-light: "montserrat-light";
+$text-regular: "montserrat-regular";
+$text-bold: "montserrat-bold";
+$text-italic: "montserrat-italic";
+
+
+// === SIZES ===
+$container-size: 100%;
+$content-size: 90%;
+$half-size: 50%;
+$quarter-size: 25%;

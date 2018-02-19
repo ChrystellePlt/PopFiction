@@ -1,0 +1,81 @@
+.main-container{
+  width: $container-size;
+  background: $secondary-color;
+  grid-area: m;
+  display: grid;
+  &__title {
+    font-family: $text-regular;
+    color: $light-color;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 5%;
+  }
+  &__weekly-selection-container {
+    width: $content-size;
+    margin: 5% auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, auto);
+    grid-gap: 20px;
+    grid-template-areas:
+    'wm1 wm2'
+    'wm3 wm4'
+    'wm5 wm6'
+    'wm7 .';
+    &__week-movie-1 {
+      margin: auto;
+      width: $content-size;
+      grid-area: wm1;
+    }
+    &__week-movie-2 {
+      margin: auto;
+      width: $content-size;
+      grid-area: wm2;
+    }
+    &__week-movie-3 {
+      margin: auto;
+      width: $content-size;
+      grid-area: wm3;
+    }
+    &__week-movie-4 {
+      margin: auto;
+      width: $content-size;
+      grid-area: wm4;
+    }
+    &__week-movie-5 {
+      margin: auto;
+      width: $content-size;
+      grid-area: wm5;
+    }
+    &__week-movie-6 {
+      margin: auto;
+      width: $content-size;
+      grid-area: wm6;
+    }
+    &__week-movie-7 {
+      margin: auto;
+      width: $content-size;
+      grid-area: wm7;
+    }
+  }
+  &__selected-movie-container {
+    width: $content-size;
+    margin: 5% auto;
+    text-align: center;
+    &__img {
+      width: 100%;
+    }
+  }
+  &__selected-movie-resume-container {
+    width: $content-size;
+    margin: auto;
+    color: $light-color;
+    font-family: $text-regular;
+    font-size: 1.2em;
+    &__title {
+      font-family: $text-bold;
+      font-size: 1.3em;
+    }
+  }
+}
