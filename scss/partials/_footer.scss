@@ -5,16 +5,10 @@
   &__content {
     width: $content-size;
     margin: auto;
-    &__title {
-      text-align: center;
-      color: $light-color;
-      margin: 7% 0;
-      font-family: montserrat-regular;
-      font-size: 1.1rem;
-    }
     &__list {
       display: flex;
       margin: auto;
+      padding-top: 5%;
       width: $container-size;
       justify-content: space-around;
       width: 70%;
@@ -23,14 +17,20 @@
         text-align: center;
         &__icon {
           width: 60%;
+          transform: scale(1);
+          transition: transform 0.3s;
+        }
+        &__icon:hover {
+          transform: scale(1.1);
+          transition: transform 0.3s;
         }
       }
     }
     &__newsletter{
       text-align: center;
-      margin: 8% 0;
+      margin-top: 8%;
       font-family: montserrat-regular;
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       &__link {
         color: $main-color;
       }
@@ -38,7 +38,7 @@
     &__credit {
       text-align: center;
       color: $light-color;
-      margin: 5% 0;
+      margin: 8% 0 3% 0;
       font-family: montserrat-regular;
       font-size: 1rem;
     }

@@ -4,35 +4,57 @@
 <head>
   <meta charset="utf-8">
   <title>POP FICTION</title>
-  <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-  <div class="global-container">
+  <div class="global-ctn">
     <header class="header">
-      <div class="header__logo-container">
-        <img class="header__logo-container__img" src="img/logo-popFiction-white.png" alt="">
+      <div class="header__logo-ctn">
+        <img class="header__logo-ctn__img" src="img/logo-popFiction-white.png" alt="">
       </div>
-      <div class="header__nav-container">
-        <ul class="header__nav-container__list" src="" alt="">
-          <li class="header__nav-container__list__item-search-bar">
-            <img class="header__logo-container__img" src="" alt="">
-          </li>
-          <li class="header__nav-container__list__item-menu">
-              <div class="header__nav-container__list__item-menu__burger-menu"></div>
-              <div class="header__nav-container__list__item-menu__burger-menu"></div>
-              <div class="header__nav-container__list__item-menu__burger-menu"></div>
+        <ul class="header__menu-desktop">
+          <li class="header__menu-desktop__item">
           </li>
         </ul>
-      </div>
+          <div class="header__menu-mobile">
+              <div class="header__menu-mobile__burger"></div>
+              <div class="header__menu-mobile__burger"></div>
+              <div class="header__menu-mobile__burger"></div>
+          </div>
+          <ul class="header__menu-mobile-details">
+            <li class="header__menu-mobile-details__item"><a href="#">My account</a></li>
+            <li class="header__menu-mobile-details__item"></li>
+            <li class="header__menu-mobile-details__category">Weekly selection</li>
+            <li class="header__menu-mobile-details__category">Action</li>
+            <li class="header__menu-mobile-details__category">Animation</li>
+            <li class="header__menu-mobile-details__category">Comedy</li>
+            <li class="header__menu-mobile-details__category">Horror / Thriller</li>
+            <li class="header__menu-mobile-details__category">All movies</li>
+            <li class="header__menu-mobile-details__item"></li>
+            <li class="header__menu-mobile-details__item">Log out</li>
+          </ul>
     </header>
-    <div class="main-container">
-      <p class="main-container__title">Weekly selection</p>
+    <div class="main">
+      <div class="main__selection-container">
+        <h1 class="main__selection-container__categoryTitle">Weekly selection</h1>
+        <div class="main__selection-container__grid"></div>
+      </div>
+      <div class="main__selected-movie">
+        <h2 class="main__selected-movie__movieTitle"></h2>
+        <video class="main__selected-movie__video" width="90%" controls>
+         Your browser does not support the video tag.
+        </video>
+        <div class="main__selected-movie__description-ctn">
+          <p class="main__selected-movie__description-ctn__duration"></p>
+          <p class="main__selected-movie__description-ctn__author"></p>
+          <p class="main__selected-movie__description-ctn__resume"></p>
+        </div>
+        <div class="main__selected-movie__button">Back to Weekly Selection</div>
+      </div>
     </div>
   <footer class="footer">
     <div class="footer__content">
-      <p class="footer__content__title">Rejoignez-nous ici :</p>
       <ul class="footer__content__list">
         <li class="footer__content__list__item"><img src="img/social-media-icons/facebook.png" alt="facebook icon" class="footer__content__list__item__icon"></li>
         <li class="footer__content__list__item"><img src="img/social-media-icons/twitter.png" alt="twitter icon" class="footer__content__list__item__icon"></li>
@@ -44,11 +66,7 @@
     </div>
 
   </footer>
+  <script type="text/javascript" src="javascript/data.js"></script>
+  <script type="text/javascript" src="javascript/main.js"></script>
 </body>
-<script type="text/javascript" src="javascript/data.js"></script>
-<script type="text/javascript" src="javascript/main.js"></script>
-
-
-
-
 </html>

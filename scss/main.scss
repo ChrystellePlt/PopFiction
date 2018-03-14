@@ -1,4 +1,4 @@
-htlm {
+html {
   font-size: 62.5%;
 }
 
@@ -7,8 +7,9 @@ htlm {
 @import "partials/header";
 @import "partials/footer";
 @import "partials/body";
+@import "partials/reset";
 
-.global-container {
+.global-ctn {
 	width: 100vw;
 	display: grid;
 	grid-template-columns: repeat(12, auto);
@@ -17,4 +18,8 @@ htlm {
 	'h h h h h h h h h h h h'
 	'm m m m m m m m m m m m'
 	'f f f f f f f f f f f f';
+}
+
+.--visible {
+  display: block;
 }

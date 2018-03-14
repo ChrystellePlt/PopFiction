@@ -1,81 +1,77 @@
-.main-container{
+.main {
   width: $container-size;
   background: $secondary-color;
   grid-area: m;
-  display: grid;
-  &__title {
-    font-family: $text-regular;
-    color: $light-color;
-    font-size: 1.5rem;
-    text-transform: uppercase;
-    text-align: center;
-    padding-top: 5%;
+  min-height: 91vh;
+  &__selection-container {
+    &__categoryTitle {
+      font-family: $text-regular;
+      color: $light-color;
+      font-size: 3.5vw;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 4vh 0 2vh 0;
+      height: 4vh;
+    }
+    &__grid {
+      width: $content-size;
+      margin: auto;
+      padding-bottom: 5vh;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, auto);
+      grid-auto-rows: auto;
+      grid-gap: 2vh 2vh;
+      &__week-movie {
+        width: 100%;
+      }
   }
-  &__weekly-selection-container {
-    width: $content-size;
-    margin: 5% auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, auto);
-    grid-gap: 20px;
-    grid-template-areas:
-    'wm1 wm2'
-    'wm3 wm4'
-    'wm5 wm6'
-    'wm7 .';
-    &__week-movie-1 {
-      margin: auto;
-      width: $content-size;
-      grid-area: wm1;
-    }
-    &__week-movie-2 {
-      margin: auto;
-      width: $content-size;
-      grid-area: wm2;
-    }
-    &__week-movie-3 {
-      margin: auto;
-      width: $content-size;
-      grid-area: wm3;
-    }
-    &__week-movie-4 {
-      margin: auto;
-      width: $content-size;
-      grid-area: wm4;
-    }
-    &__week-movie-5 {
-      margin: auto;
-      width: $content-size;
-      grid-area: wm5;
-    }
-    &__week-movie-6 {
-      margin: auto;
-      width: $content-size;
-      grid-area: wm6;
-    }
-    &__week-movie-7 {
-      margin: auto;
-      width: $content-size;
-      grid-area: wm7;
-    }
   }
-  &__selected-movie-container {
-    width: $content-size;
-    margin: 5% auto;
-    text-align: center;
-    &__img {
-      width: 100%;
-    }
-  }
-  &__selected-movie-resume-container {
+  &__selected-movie {
+    height: 81vh;
+    display: none;
     width: $content-size;
     margin: auto;
     color: $light-color;
     font-family: $text-regular;
-    font-size: 1.2em;
-    &__title {
-      font-family: $text-bold;
-      font-size: 1.3em;
+    font-size: 2vh;
+    text-align: center;
+    &__video {
+      text-align: center;
+    }
+    &__description-ctn {
+      text-align: left;
+    }
+    &__button {
+      position: absolute;
+      color: #fff;
+      font-size: 3.5vw;
+      border: 1.5px solid $main-color;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50vw;
+      bottom: 4vh;
+      border-radius: 50px;
+      padding: 1.2vh;
+      text-align: center;
+      transition: all .2s;
+    }
+    &__button:hover {
+      background: $main-color;
     }
   }
+  &__week-selection-ctn > img{
+    overflow: hidden;
+    transition: transform .3s ease-in-out;
+  }
+  &__week-selection-ctn > img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+  }
+}
+
+.--hidden {
+  display: none;
 }

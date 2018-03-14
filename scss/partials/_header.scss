@@ -4,32 +4,93 @@
   color: $secondary-color;
   grid-area: h;
   display: flex;
-  height: 10vh;
-  &__logo-container {
-    width: $half-size;
+  height: 9vh;
+  &__logo-ctn {
+    width: 80%;
     &__img {
-      width: 90%;
+      width: 55%;
     }
   }
-  &__nav-container {
-    width: $half-size;
-    &__list {
+    &__menu-desktop {
       display: flex;
       height: 100%;
-      &__item-search-bar {
+      display: none;
+      width: 20%;
+      &__item {
         width: $half-size;
       }
-      &__item-menu {
-          width: $half-size;
-          margin-top: 10%;
-          padding: 0 12%;
-        &__burger-menu {
-          height: 11%;
-          background: $light-color;
-          margin: 12% 0;
-          border-radius: 30px;
+    }
+    &__menu-mobile {
+        width: 13%;
+        margin-top: 12%;
+        & div:nth-child(1) {
+          -webkit-transform-origin: left center;
+          -moz-transform-origin: left center;
+          -o-transform-origin: left center;
+          transform-origin: left center;
         }
+        & div:nth-child(2) {
+          -webkit-transform-origin: left center;
+          -moz-transform-origin: left center;
+          -o-transform-origin: left center;
+          transform-origin: left center;
+        }
+        & div:nth-child(3) {
+          -webkit-transform-origin: left center;
+          -moz-transform-origin: left center;
+          -o-transform-origin: left center;
+          transform-origin: left center;
+        }
+        &.open div:nth-child(1) {
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+        }
+        &.--open div:nth-child(2) {
+          width: 0%;
+          opacity: 0;
+        }
+        &.open div:nth-child(3) {
+          -webkit-transform: rotate(-45deg);
+          -moz-transform: rotate(-45deg);
+          -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+        }
+      &__burger {
+        width: 100%;
+        height: 0.7vh;
+        background: $light-color;
+        margin: 1vh 0;
+        border-radius: 30px;
       }
     }
-  }
+    &__menu-mobile:hover{
+      cursor: pointer;
+    }
+    &__menu-mobile-details {
+      display: none;
+      position: absolute;
+      height: 91vh;
+      font-family: $text-regular;
+      z-index: 1;
+      color: $light-color;
+      top: 9vh;
+      left: 0;
+      width: 100%;
+      &__item,
+      &__category {
+        height: 6vh;
+        text-align: center;
+        font-size: 4.5vw;
+        text-transform: uppercase;
+        padding-top: 3.2vh;
+      }
+    }
+    &__menu-mobile-details > li:nth-child(odd){
+      background: $secondary-color;
+    }
+    &__menu-mobile-details > li:nth-child(even){
+      background: $black-color;
+    }
 }
