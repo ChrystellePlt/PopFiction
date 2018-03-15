@@ -2,25 +2,24 @@
 
 var selectionContainer = document.querySelector('.main__selection-container');
 var grid = document.querySelector('.main__selection-container__grid');
-var j = 1;
 
 displayWeeklySelection();
 
 function displayWeeklySelection() {
+  var movies = '';
   data.films.forEach(function(movie) {
     if (movie.weekMovie) {
-      var weekMovie = document.createElement('IMG');
-      weekMovie.setAttribute('src', movie.img);
-      weekMovie.classList.add('main__selection-container__grid__week-movie');
-      grid.appendChild(weekMovie);
-      j++;
-    };
+      movies += "<div class=main__selection-container__grid__img-container><img class=main__selection-container__grid__img-container__img src=" + movie.img + "><div class=main__selection-container__grid__img-container__play-sign-container><img class=main__selection-container__grid__img-container__play-sign-container__play-sign src=img/play-sign-white.png></div><p class=main__selection-container__grid__title>" + movie.title + "</p></div>";
+    }
   })
+  grid.innerHTML = movies;
+  selection = document.querySelectorAll('.main__selection-container__grid > img');
+  displaySelection();
 }
 
 // ------------------ display selected movie ---------------------- //
 
-var selection = document.querySelectorAll('.main__selection-container__grid > img');
+var selection = document.querySelectorAll('.main__selection-container__grid__img-container__play-sign-container');
 var selectedMovie = document.querySelector('.main__selected-movie');
 var categoryTitle = document.querySelector('.main__selection-container__categoryTitle');
 var movieTitle = document.querySelector('.main__selected-movie__movieTitle');
@@ -29,11 +28,14 @@ var author = document.querySelector('.main__selected-movie__description-ctn__aut
 var resume = document.querySelector('.main__selected-movie__description-ctn__resume');
 var backButton = document.querySelector('.main__selected-movie__button');
 var video = document.querySelector('.main__selected-movie__video');
+var element;
 
 function displaySelection() {
   selection.forEach(function(movie) {
     movie.addEventListener('click', function(event) {
-      var src = this.getAttribute('src');
+      element = this.previousSibling;
+      console.log(element);
+      var src = element.getAttribute('src');
       data.films.forEach(function(movie) {
         if (movie.img === src) {
           video.setAttribute('src', `videos/${movie.src}`);
@@ -45,6 +47,11 @@ function displaySelection() {
       });
       selectionContainer.classList.add('--hidden');
       selectedMovie.classList.add('--visible');
+      window.scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
     })
   })
 }
@@ -57,52 +64,58 @@ backButton.addEventListener('click', function() {
   video.pause();
 })
 
-var mobileMenu = document.querySelector('.header__menu-mobile');
-var mobileMenuDetails = document.querySelector('.header__menu-mobile-details');
+var profileIcon = document.querySelector('.header__profile-container__img');
+var dropdownMenu = document.querySelector('.header__dropdown-list');
+var footer = document.querySelector('.footer');
 
-mobileMenu.addEventListener('click', function(event) {
-  mobileMenuDetails.classList.toggle('--visible');
-  mobileMenu.classList.toggle('--open');
+profileIcon.addEventListener('click', function(event) {
+  dropdownMenu.classList.toggle('--visible');
+  selectionContainer.classList.toggle('--hidden');
+  footer.classList.toggle('--hidden');
 });
 
 //-------------------CATEGORIES----------------------//
 
-const categories = document.querySelectorAll('.header__menu-mobile-details__category');
-var current;
+var categoriesButton = document.querySelector('.main__selection-container__wrapper-container__button');
+const dropdownList = document.querySelector('.main__selection-container__wrapper-container__wrapper__dropdown-list')
+const categories = document.querySelectorAll('.--category');
+
+categoriesButton.addEventListener('click', function(event) {
+  dropdownList.classList.toggle('--visible');
+  console.log(categories);
+})
 
 categories.forEach(function(category) {
   category.addEventListener('click', function(event) {
+    dropdownList.classList.remove('--visible');
     var movies = '';
     category = event.target.textContent;
+    console.log(category);
     current = category;
     if (category === 'Weekly selection') {
       data.films.forEach(function(movie) {
         if (movie.weekMovie) {
-          movies += "<img class=main__selection-container__grid__week-movie src=" + movie.img + ">";
+          movies += "<div class=main__selection-container__grid__img-container><img class=main__selection-container__grid__img-container__img src=" + movie.img + "><div class=main__selection-container__grid__img-container__play-sign-container><img class=main__selection-container__grid__img-container__play-sign-container__play-sign src=img/play-sign-white.png></div><p class=main__selection-container__grid__title>" + movie.title + "</p></div>";
         }
       })
       categoryTitle.innerHTML = 'Weekly selection';
     } else if (category === 'All movies') {
       data.films.forEach(function(movie) {
-        movies += "<img class=main__selection-container__grid__week-movie src=" + movie.img + ">";
+        movies += "<div class=main__selection-container__grid__img-container><img class=main__selection-container__grid__img-container__img src=" + movie.img + "><div class=main__selection-container__grid__img-container__play-sign-container><img class=main__selection-container__grid__img-container__play-sign-container__play-sign src=img/play-sign-white.png></div><p class=main__selection-container__grid__title>" + movie.title + "</p></div>";
       })
       categoryTitle.innerHTML = 'All movies';
     } else {
       data.films.forEach(function(movie) {
         if (movie.category === category) {
-          movies += "<img class=main__selection-container__grid__week-movie src=" + movie.img + ">";
+          movies += "<div class=main__selection-container__grid__img-container><img class=main__selection-container__grid__img-container__img src=" + movie.img + "><div class=main__selection-container__grid__img-container__play-sign-container><img class=main__selection-container__grid__img-container__play-sign-container__play-sign src=img/play-sign-white.png></div><p class=main__selection-container__grid__title>" + movie.title + "</p></div>";
         };
       })
-      categoryTitle.innerHTML = category;
     }
     if (selectionContainer.classList.contains('--hidden')) {
       selectionContainer.classList.remove('--hidden');
     }
     grid.innerHTML = movies;
-    mobileMenuDetails.classList.remove('--visible');
-    mobileMenu.classList.remove('--open');
-    selectedMovie.classList.remove('--visible');
-    selection = document.querySelectorAll('.main__selection-container__grid > img');
+    selection = document.querySelectorAll('.main__selection-container__grid__img-container__play-sign-container');
     displaySelection();
   })
 })

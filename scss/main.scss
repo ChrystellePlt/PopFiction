@@ -12,14 +12,11 @@ html {
 .global-ctn {
 	width: 100vw;
 	display: grid;
+  height: 100%;
 	grid-template-columns: repeat(12, auto);
 	grid-template-rows: repeat(3, auto);
 	grid-template-areas:
 	'h h h h h h h h h h h h'
 	'm m m m m m m m m m m m'
 	'f f f f f f f f f f f f';
-}
-
-.--visible {
-  display: block;
 }

@@ -31,7 +31,7 @@ var data = {
         weekMovie: true
     }, {
         src: 'Dragon+Ball+vs+Naruto.+Anime+fight.(720p).mp4',
-        img: 'img/miniatures/DragonBallVsNaruto.png',
+        img: 'img/miniatures/DragonBall-Vs-Naruto.png',
         title: 'Dragon Ball vs Naruto',
         duration: '8:39',
         author: 'Alberto Barberá',
@@ -73,7 +73,7 @@ var data = {
         weekMovie: true
     }, {
         src: 'Naruto+The+Movie!+(Official+Fake+Trailer)(720p).mp4',
-        img: 'img/miniatures/NarutoTheMovie.png',
+        img: 'img/miniatures/Naruto-The-Movie.png',
         title: 'Naruto The Movie! (Official Fake Trailer)',
         duration: '3:15',
         author: 'nigahiga',
@@ -87,7 +87,7 @@ var data = {
         weekMovie: true
     }, {
         src: 'Red+Hood_+The+Fallen+-+DC+Comic+Batman+Fan+Film(720p).mp4',
-        img: 'img/miniatures/RedHood.png',
+        img: 'img/miniatures/Redhood.png',
         title: 'Red Hood: The Fallen',
         duration: '23:16',
         author: 'Toby Bajrovic',
