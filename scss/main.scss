@@ -28,7 +28,7 @@ html {
 }
 
 .--tablet {
-  display: block;
+  display: flex;
   @include desktop {
     display: none;
   }

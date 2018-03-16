@@ -69,12 +69,17 @@
     padding-left: 3%;
     margin-right: 4%;
     margin-left: auto;
+    @include tablet {
+      font-size: 1.2rem;
+    }
     @include desktop {
       width: 20%;
       margin-right: 2%;
+      font-size: 1.1rem;
     }
     @include large-desktop {
       width: 15%;
+      font-size: 1.2rem;
     }
   }
 
@@ -90,13 +95,13 @@
     @include desktop {
       width: 5%;
     }
-    @include large-desktop {
-      width: 4%;
-    }
 
     &__img {
-      width: 100%;
+      width: 90%;
       cursor: pointer;
+      @include desktop {
+        width: 65%;
+      }
     }
   }
   &__dropdown-list {
@@ -110,31 +115,55 @@
     top: 8vh;
     height: 92vh;
     @include tablet {
-      width: 20vh;
+      width: 30vh;
       height: auto;
     }
 
     & > li:nth-child(odd) {
       background: $secondary-color;
+      &:hover {
+        color: $main-color;
+        cursor: pointer;
+      }
       @include tablet {
         background: #fff;
-        border: 0.5px solid $main-color;
+        border-bottom: 0.5px solid $main-color;
         color: #000;
         &:hover {
-          background: $main-color;
+          background: $black-color;
           color: #fff;
         }
       }
     }
     & > li:nth-child(even) {
       background: $black-color;
+      &:hover {
+        color: $main-color;
+        cursor: pointer;
+      }
       @include tablet {
       background: #fff;
-      border-top: 0.5px solid $main-color;
+      border-bottom: 0.5px solid $main-color;
       color: #000;
         &:hover {
-          background: $main-color;
+          background: $black-color;
           color: #fff;
+        }
+      }
+    }
+    & > li:last-child {
+      background: $main-color;
+      &:hover {
+        background: $main-color;
+        color: #000;
+        cursor: pointer;
+      }
+      @include tablet {
+      background: $main-color;
+      color: #000;
+        &:hover {
+          background: $black-color;
+          color: $main-color;
         }
       }
     }

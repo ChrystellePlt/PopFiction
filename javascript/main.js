@@ -36,18 +36,18 @@ const categoriesButton = document.querySelector('.main__selection-container__wra
 const navBarItems = document.querySelectorAll('.header__nav__list__items');
 var choice;
 
-navBarItems.forEach(function(navItem){
-navItem.addEventListener('click', function(event) {
-  navBarItems.forEach(function(navItem){
-    if (navItem.classList.contains('--is-active')) {
-      navItem.classList.remove('--is-active');
-    }
-  })
+navBarItems.forEach(function(navItem) {
+  navItem.addEventListener('click', function(event) {
+    navBarItems.forEach(function(navItem) {
+      if (navItem.classList.contains('--is-active')) {
+        navItem.classList.remove('--is-active');
+      }
+    })
     choice = event.target.textContent;
     navItem.classList.add('--is-active');
     if (choice === 'Home') {
       categoriesButton.classList.remove('--hidden');
-      displayWeeklySelection ();
+      displayWeeklySelection();
       selectedCategory.innerHTML = 'Week Selection';
     } else if (choice === 'Favorites') {
       displayFavorites();
@@ -61,7 +61,7 @@ var selection = document.querySelectorAll('.main__selection-container__grid__img
 var selectedMovie = document.querySelector('.main__selected-movie');
 var categoryTitle = document.querySelector('.main__selection-container__categoryTitle');
 var movieTitle = document.querySelector('.main__selected-movie__movieTitle');
-var duration = document.querySelector('.main__selected-movie__description-ctn__duration');
+var category = document.querySelector('.main__selected-movie__description-ctn__category');
 var author = document.querySelector('.main__selected-movie__description-ctn__author');
 var resume = document.querySelector('.main__selected-movie__description-ctn__resume');
 var backButton = document.querySelector('.main__selected-movie__button');
@@ -77,7 +77,7 @@ function displaySelection() {
         if (movie.img === src) {
           video.setAttribute('src', `videos/${movie.src}`);
           movieTitle.innerHTML = movie.title;
-          duration.innerHTML = `Duration : ${movie.duration}`;
+          category.innerHTML = `Category : ${movie.category}`;
           author.innerHTML = `Author : ${movie.author}`;
           resume.innerHTML = movie.description;
         }
@@ -108,12 +108,21 @@ backButton.addEventListener('click', function() {
 var profileIcon = document.querySelector('.header__profile-container__img');
 var dropdownMenu = document.querySelector('.header__dropdown-list');
 var footer = document.querySelector('.footer');
+window.ev = false;
 
 profileIcon.addEventListener('click', function(event) {
   dropdownMenu.classList.toggle('--visible');
-  // if screen size < 481px =
-  //selectionContainer.classList.toggle('--hidden');
-  //footer.classList.toggle('--hidden');
+  var width = window.innerWidth;
+  if (width < 481) {
+    selectionContainer.classList.toggle('--hidden');
+    footer.classList.toggle('--hidden');
+  }
+  dropdownMenu.addEventListener('mouseleave', function(event){
+    window.ev = true;
+    if (window.ev) {
+      dropdownMenu.classList.remove('--visible');
+    }
+  })
 });
 
 //-------------------CATEGORIES----------------------//
@@ -131,7 +140,7 @@ categories.forEach(function(category) {
     dropdownList.classList.remove('--visible');
     var movies = '';
     category = event.target.textContent;
-    if (category === 'Weekly selection') {
+    if (category === 'Weekly Selection') {
       data.films.forEach(function(movie) {
         if (movie.weekMovie) {
           movies += "<div class=main__selection-container__grid__img-container><img class=main__selection-container__grid__img-container__img src=" + movie.img + "><div class=main__selection-container__grid__img-container__play-sign-container><img class=main__selection-container__grid__img-container__play-sign-container__play-sign src=img/play-sign-white.png></div><p class=main__selection-container__grid__title>" + movie.title + "</p></div>";

@@ -19,6 +19,9 @@
           width: 60%;
           transform: scale(1);
           transition: transform 0.3s;
+          &:hover {
+            cursor: pointer;
+          }
         }
         &__icon:hover {
           transform: scale(1.1);
