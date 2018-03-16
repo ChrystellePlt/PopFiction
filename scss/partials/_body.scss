@@ -10,6 +10,7 @@
       width: 80%;
       display: flex;
       margin: 10% auto;
+      position: relative;
 
       &__label {
         background: $main-color;
@@ -25,32 +26,41 @@
       }
 
       &__wrapper {
-        font-size: 1.2rem;
-        width: 62%;
+        font-size: 1.1rem;
+        width: 98%;
         height: 4.5vh;
         background: #fff;
-        width: 40vw;
         color: #000;
-        font-family: $text-regular;
+        font-family: "montserrat-regular";
         display: flex;
         align-items: center;
         justify-content: center;
         position: relative;
+        margin-left: 2%;
+      }
 
-        &__dropdown-list {
-          display: none;
-          position: absolute;
-          top: 100%;
-          left: 0;
-          background: #fff;
-          z-index: 3;
-          width: 120%;
-          & > li {
-            color: #000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 5vh;
+      &__dropdown-list {
+        display: none;
+        position: absolute;
+        top: 4.5vh;
+        right: 0;
+        background: #fff;
+        z-index: 3;
+        width: 73%;
+        border-top: 0.5px solid #000;
+
+        & > li {
+          color: #000;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 5vh;
+          font-family: $text-regular;
+
+          &:hover {
+            cursor: pointer;
+            background-color: $secondary-color;
+            color: #fff;
           }
         }
       }
@@ -59,18 +69,31 @@
         width: 10%;
         height: 4.5vh;
         background: #fff;
+        text-align: center;
+
         &:hover {
           cursor: pointer;
         }
 
         &__down-arrow {
-          width:50%;
+          width: 50%;
+          padding-top: 1vh;
+          @include tablet {
+            width: 40%;
+          }
+          @include desktop {
+            width: 30%;
+          }
+          @include large-desktop {
+            width: 20%;
+            justify-content: right;
+          }
         }
       }
     }
 
     &__grid {
-      width: 75%;
+      width: 70%;
       margin: auto;
       padding-bottom: 5vh;
       display: grid;
@@ -81,15 +104,15 @@
       overflow: hidden;
       @include tablet {
         grid-template-columns: repeat(2, 1fr);
-        width: 90%;
+        width: 80%;
       }
       @include desktop {
         grid-template-columns: repeat(3, 1fr);
-        width: 80%;
       }
       @include large-desktop {
         grid-template-columns: repeat(4, 1fr);
       }
+
       &__img-container {
         background: #000;
         width: 100%;
@@ -109,6 +132,7 @@
           left: 0;
           width: 100%;
           background: rgba(1,1,1,0.25);
+
           &:hover {
             cursor: pointer;
             transition: all 0.3s;
@@ -127,6 +151,7 @@
           }
         }
       }
+
       &__title {
         padding: 5% 0;
         color: #fff;
@@ -188,12 +213,4 @@
     cursor: pointer;
     transform: scale(1.1);
   }
-}
-
-.--hidden {
-  display: none;
-}
-
-.--visible {
-  display: block;
 }

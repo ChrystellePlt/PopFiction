@@ -12,21 +12,27 @@
       <div class="header__logo-ctn">
         <img class="header__logo-ctn__img" src="img/logo-popFiction-white.png" alt="Pop Fiction logo">
       </div>
-      <nav></nav>
+      <nav class="header__nav">
+        <ul class="header__nav__list">
+          <li class="header__nav__list__items">Home</li>
+          <li class="header__nav__list__items">Favorites</li>
+          <li class="header__nav__list__items">Forum</li>
+        </ul>
+      </nav>
       <input class="header__search-bar" placeholder="Rechercher..." type="text" name="" value="">
       <div class="header__profile-container">
         <img class="header__profile-container__img" src="img/profile.png" alt="user icon">
       </div>
       <ul class="header__dropdown-list">
         <li class="header__dropdown-list__items">My profile</li>
-        <li class="header__dropdown-list__items"></li>
-        <li class="header__dropdown-list__items">Favorites</li>
+        <li class="header__dropdown-list__items --mobile"></li>
+        <li class="header__dropdown-list__items --tablet">Favorites</li>
         <li class="header__dropdown-list__items">Downloads</li>
-        <li class="header__dropdown-list__items"></li>
+        <li class="header__dropdown-list__items --mobile"></li>
         <li class="header__dropdown-list__items">Forum</li>
         <li class="header__dropdown-list__items">F.A.Q.</li>
         <li class="header__dropdown-list__items">Help</li>
-        <li class="header__dropdown-list__items"></li>
+        <li class="header__dropdown-list__items --mobile"></li>
         <li class="header__dropdown-list__items">Log out</li>
       </ul>
     </header>
@@ -35,15 +41,15 @@
         <div class="main__selection-container__wrapper-container">
           <div class="main__selection-container__wrapper-container__label">Categories</div>
           <div class="main__selection-container__wrapper-container__wrapper">Weekly Selection
-            <ul class="main__selection-container__wrapper-container__wrapper__dropdown-list">
-              <li class="--category">Weekly Selection</li>
-              <li class="--category">Action</li>
-              <li class="--category">Animation</li>
-              <li class="--category">Comedy</li>
-              <li class="--category">Horror / Thriller</li>
-              <li class="--category">All movies</li>
-            </ul>
           </div>
+          <ul class="main__selection-container__wrapper-container__dropdown-list">
+            <li class="--category">Weekly Selection</li>
+            <li class="--category">Action</li>
+            <li class="--category">Animation</li>
+            <li class="--category">Comedy</li>
+            <li class="--category">Horror / Thriller</li>
+            <li class="--category">All movies</li>
+          </ul>
           <div class="main__selection-container__wrapper-container__button">
             <img class="main__selection-container__wrapper-container__button__down-arrow" src="img/down-arrow.png" alt="down arrow">
           </div>

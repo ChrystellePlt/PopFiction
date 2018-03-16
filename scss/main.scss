@@ -20,3 +20,28 @@ html {
 	'm m m m m m m m m m m m'
 	'f f f f f f f f f f f f';
 }
+.--mobile {
+  display: block;
+  @include tablet {
+    display: none;
+  }
+}
+
+.--tablet {
+  display: block;
+  @include desktop {
+    display: none;
+  }
+}
+
+.--hidden {
+  display: none;
+}
+
+.--visible {
+  display: block;
+}
+
+.--is-active {
+  text-decoration: underline;
+}
