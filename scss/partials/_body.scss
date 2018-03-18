@@ -11,6 +11,12 @@
       display: flex;
       margin: 10% auto;
       position: relative;
+      @include tablet {
+        margin: 9% auto;
+      }
+      @include desktop {
+        margin: 8% auto 4% auto;
+      }
 
       &__wrapper {
         font-size: 1.1rem;
@@ -28,10 +34,10 @@
         }
         @include desktop {
           font-size: 1.3rem;
+          height: 6vh;
         }
         @include large-desktop {
           font-size: 1.4rem;
-          height: 6vh;
         }
       }
 
@@ -53,7 +59,6 @@
         }
         @include large-desktop {
           font-size: 1.4rem;
-          top: 6vh;
         }
 
         & > li {
@@ -80,7 +85,7 @@
         align-items: center;
         justify-content: center;
         border-left: 0.5px solid #000;
-        @include large-desktop {
+        @include desktop {
           height: 6vh;
         }
 
@@ -180,26 +185,30 @@
 
   &__selected-movie {
     display: none;
-    width: $content-size;
     margin: auto;
     color: $light-color;
     font-family: $text-regular;
     font-size: 2vh;
     text-align: center;
-    width: 100vw;
+    width: 95vw;
+    @include desktop {
+      width: 90vw;
+    }
 
     &__movieTitle {
       font-size: 1.5rem;
-      margin: 9% auto 3% auto;
+      margin: 9% auto 0 auto;
       text-transform: uppercase;
       width: 70%;
       text-decoration: underline;
       line-height: 2.3rem;
       @include tablet {
+        margin-top: 7%;
         font-size: 1.6rem;
       }
       @include desktop {
         font-size: 1.7rem;
+        margin-top: 5%;
       }
       @include large-desktop {
         font-size: 1.8rem;
@@ -208,7 +217,18 @@
 
     &__video {
       text-align: center;
-      margin: 6% 0;
+      margin: 9% 0 6% 0;
+      @include tablet {
+        font-size: 1.6rem;
+        margin-top: 7%;
+      }
+      @include desktop {
+        font-size: 1.7rem;
+        margin-top: 5%;
+      }
+      @include large-desktop {
+        font-size: 1.8rem;
+      }
     }
 
     &__description-ctn {
@@ -217,6 +237,18 @@
       width: 88%;
       margin: auto;
       line-height: 1.8rem;
+      @include tablet {
+        font-size: 1.3rem;
+        line-height: 2rem;
+      }
+      @include desktop {
+        font-size: 1.4rem;
+        line-height: 2.1rem;
+      }
+      @include large-desktop {
+        line-height: 2.3rem;
+        font-size: 1.5rem;
+      }
 
       &__resume {
         margin: 5% 0;
@@ -225,28 +257,28 @@
 
     &__button {
       color: #fff;
-      font-size: 3.5vw;
+      font-size: 1.3rem;
       border: 1.5px solid $main-color;
       left: 0;
       right: 0;
       margin: 15% auto;
-      width: 50vw;
+      width: 35vw;
       bottom: 4vh;
       border-radius: 50px;
       padding: 1.2vh;
       text-align: center;
       transition: all 0.2s;
       @include tablet {
-        width: 40vw;
-        font-size: 3vw;
+        width: 30vw;
+        font-size:1.4rem;
       }
       @include desktop {
-        width: 30vw;
-        font-size: 2.5vw;
+        width: 25vw;
+        font-size: 1.5rem;
       }
       @include large-desktop {
         width: 20vw;
-        font-size: 2vw;
+        font-size: 1.6rem;
       }
     }
 

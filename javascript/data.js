@@ -70,7 +70,8 @@ var data = {
         sub_language: 'N/A',
         rating: 3,
         category: 'Action',
-        weekMovie: true
+        weekMovie: true,
+        favorite: true
     }, {
         src: 'Naruto+The+Movie!+(Official+Fake+Trailer)(720p).mp4',
         img: 'img/miniatures/Naruto-The-Movie.png',
@@ -210,7 +211,8 @@ var data = {
         sub_language: 'N/A',
         rating: 4,
         category: 'Action',
-        weekMovie: false
+        weekMovie: false,
+        favorite: true
     }, {
         src: 'Attack+on+Titan+-+LEVI+vs+BEAST+TITAN+-+Fan+made+animation+-+Shingeki+no+kyojin+manga+chapter+81(480p).mp4',
         img: 'img/miniatures/LevivsTitanBeast.png',
@@ -242,7 +244,7 @@ var data = {
     }, {
         src: 'SPAWN_+THE+RECALL+-+FAN+FILM(720p).mp4',
         img: 'img/miniatures/Spawn.png',
-        title: 'SPAWN: THE RECALL',
+        title: 'SPAWN : THE RECALL',
         duration: '7:56',
         author: 'Irissee',
         author_url: 'https://www.youtube.com/channel/UCefxt5RuoiBlanGXmh4vg_A',
@@ -255,17 +257,18 @@ var data = {
         weekMovie: false
     }, {
         src: '[Rebeler]+Madara+VS+Hashirama+-+Cosplay+Movie(720p).mp4',
-        img: 'img/miniatures/Rebeler.png',
-        title: '[Rebeler] Madara VS Hashirama',
+        img: 'img/miniatures/Rebels.png',
+        title: 'Rebels : Madara VS Hashirama',
         duration: '8:06',
         author: 'Rebeler Team',
         author_url: 'https://www.youtube.com/channel/UCSDJAB-afLRrbytxQuq-lAg',
-        description: 'REBELER adalah Organisasi Cosplay yang Independent berbentuk Team di daerah Bojonegoro - Jawa Timur, yang mempunyai tujuan untuk mengembangkan kreativitas para membernya dalam dunia percosplayan',
+        description: 'REBELS adalah Organisasi Cosplay yang Independent berbentuk Team di daerah Bojonegoro - Jawa Timur, yang mempunyai tujuan untuk mengembangkan kreativitas para membernya dalam dunia percosplayan',
         year: 2016,
         audio_language: 'N/A',
         sub_language: 'N/A',
         rating: 4,
         category: 'Action',
-        weekMovie: false
+        weekMovie: false,
+        favorite: true
     }, ]
 };

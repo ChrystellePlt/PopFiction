@@ -5,45 +5,149 @@
   &__content {
     width: $content-size;
     margin: auto;
-    &__list {
+    @include desktop {
       display: flex;
-      margin: auto;
+      padding-top: 3%;
+    }
+    &__social-media {
+      display: flex;
+      width: 100%;
       padding-top: 5%;
-      width: $container-size;
-      justify-content: space-around;
-      width: 70%;
-      &__item {
-        width: $quarter-size;
-        text-align: center;
-        &__icon {
-          width: 60%;
-          transform: scale(1);
-          transition: transform 0.3s;
-          &:hover {
-            cursor: pointer;
-          }
+      margin: auto;
+      align-items: center;
+      @include tablet {
+        width: 70%;
+      }
+      @include desktop {
+        width: 50%;
+        display: block;
+        order: 2;
+      }
+      @include large-desktop {
+        width: 33.33%;
+        display: block;
+        margin: 0 auto;
+      }
+      &__text {
+        display: none;
+        color: #fff;
+        font-family: $text-regular;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        justify-content: center;
+        align-content: center;
+        width: 30%;
+        @include tablet {
+          display: block;
         }
-        &__icon:hover {
-          transform: scale(1.1);
-          transition: transform 0.3s;
+        @include desktop {
+          text-align: center;
+          width: 100%;
+        }
+      }
+      &__list {
+        display: flex;
+        margin: auto;
+        justify-content: space-around;
+        width: 50%;
+        padding: 0 5%;
+        align-items: center;
+        @include desktop {
+          padding: 5% 0;
+          width: 60%;
+        }
+        &__item {
+          width: 25%;
+          text-align: center;
+          @include tablet {
+            display: block;
+          }
+          &__icon {
+            width: 70%;
+            transform: scale(1);
+            transition: transform 0.3s;
+            &:hover {
+              cursor: pointer;
+            }
+            @include tablet {
+              width: 65%;
+            }
+          }
+          &__icon:hover {
+            transform: scale(1.1);
+            transition: transform 0.3s;
+          }
         }
       }
     }
+
     &__newsletter{
       text-align: center;
       margin-top: 8%;
       font-family: montserrat-regular;
       font-size: 1.3rem;
+      @include tablet {
+        font-size: 1.4rem;
+      }
+      @include desktop {
+        font-size: 1.3rem;
+        width: 50%;
+      }
+      @include large-desktop {
+        width: 33.33%;
+      }
       &__link {
         color: $main-color;
+        display: block;
+      }
+      &__container {
+        margin: 6% auto;
+        display: flex;
+        &__input {
+          width: 50%;
+          margin-right: 2%;
+        }
+        &__button {
+          height: 3.5vh;
+        }
+      }
+    }
+
+    &__site-map {
+      color: #fff;
+      width: 33.33%;
+      text-align: center;
+      font-family: $text-regular;
+      &__list {
+        text-transform: uppercase;
+        font-size: 1.3rem;
+        line-height: 1.9rem;
+        padding-bottom: 2%;
+        &__items {
+          text-transform: none;
+          font-size: 1.2rem;
+          & > a:hover {
+            color: $main-color;
+          }
+        }
       }
     }
     &__credit {
       text-align: center;
       color: $light-color;
-      margin: 8% 0 3% 0;
+      margin: 6% 0 2% 0;
       font-family: montserrat-regular;
       font-size: 1rem;
+      @include tablet {
+        font-size: 1.1rem;
+      }
+      @include desktop {
+        font-size: 1.2rem;
+        margin: 3% 0 2% 0;
+      }
+      @include large-desktop {
+        font-size: 1.3rem;
+      }
     }
   }
 }

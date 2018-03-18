@@ -34,6 +34,20 @@ html {
   }
 }
 
+.--desktop {
+  display: none;
+  @include desktop {
+    display: block;
+  }
+}
+
+.--large-desktop {
+  display: none;
+  @include large-desktop {
+    display: block;
+  }
+}
+
 .--hidden {
   display: none;
 }

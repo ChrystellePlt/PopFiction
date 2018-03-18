@@ -2,6 +2,8 @@
 
 var selectionContainer = document.querySelector('.main__selection-container');
 var grid = document.querySelector('.main__selection-container__grid');
+var selectedCategory = document.querySelector('.main__selection-container__wrapper-container__wrapper');
+
 
 displayWeeklySelection();
 
@@ -13,6 +15,7 @@ function displayWeeklySelection() {
     }
   })
   grid.innerHTML = movies;
+  selectedCategory.innerHTML = 'Weekly Selection';
   selection = document.querySelectorAll('.main__selection-container__grid > img');
   displaySelection();
 }
@@ -20,7 +23,7 @@ function displayWeeklySelection() {
 function displayFavorites() {
   var movies = '';
   data.films.forEach(function(movie) {
-    if (movie.favorites) {
+    if (movie.favorite) {
       movies += "<div class=main__selection-container__grid__img-container><img class=main__selection-container__grid__img-container__img src=" + movie.img + "><div class=main__selection-container__grid__img-container__play-sign-container><img class=main__selection-container__grid__img-container__play-sign-container__play-sign src=img/play-sign-white.png></div><p class=main__selection-container__grid__title>" + movie.title + "</p></div>";
     }
   })
@@ -48,7 +51,6 @@ navBarItems.forEach(function(navItem) {
     if (choice === 'Home') {
       categoriesButton.classList.remove('--hidden');
       displayWeeklySelection();
-      selectedCategory.innerHTML = 'Week Selection';
     } else if (choice === 'Favorites') {
       displayFavorites();
     }
@@ -117,19 +119,20 @@ profileIcon.addEventListener('click', function(event) {
     selectionContainer.classList.toggle('--hidden');
     footer.classList.toggle('--hidden');
   }
-  dropdownMenu.addEventListener('mouseleave', function(event){
-    window.ev = true;
-    if (window.ev) {
-      dropdownMenu.classList.remove('--visible');
-    }
-  })
+  if (width > 480) {
+    dropdownMenu.addEventListener('mouseleave', function(event){
+      window.ev = true;
+      if (window.ev) {
+        dropdownMenu.classList.remove('--visible');
+      }
+    })
+  }
 });
 
 //-------------------CATEGORIES----------------------//
 
 const dropdownList = document.querySelector('.main__selection-container__wrapper-container__dropdown-list')
 const categories = document.querySelectorAll('.--category');
-var selectedCategory = document.querySelector('.main__selection-container__wrapper-container__wrapper');
 
 categoriesButton.addEventListener('click', function(event) {
   dropdownList.classList.toggle('--visible');
