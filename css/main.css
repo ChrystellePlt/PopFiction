@@ -23,7 +23,7 @@ html {
   height: 8vh;
   width: 100vw; }
   .header__logo-ctn {
-    margin: 14% 2% 0 0;
+    margin: 1% 2% 0 0;
     width: 40%; }
     @media only screen and (min-width: 481px) {
       .header__logo-ctn {
