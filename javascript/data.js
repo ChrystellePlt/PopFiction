@@ -17,7 +17,7 @@ var data = {
         weekMovie: true
     }, {
         src: 'Naruto+Live+Action+(avec+Florian+Nguyen+et+Aziatomik)(720p).mp4',
-        img: 'img/miniatures/narutoliveaction.png',
+        img: 'img/miniatures/NarutoLiveaction.png',
         title: 'Naruto Live Action',
         duration: '1:47',
         author: 'Brice Duan',
@@ -88,7 +88,7 @@ var data = {
         weekMovie: true
     }, {
         src: 'Red+Hood_+The+Fallen+-+DC+Comic+Batman+Fan+Film(720p).mp4',
-        img: 'img/miniatures/Redhood.png',
+        img: 'img/miniatures/RedHood.png',
         title: 'Red Hood: The Fallen',
         duration: '23:16',
         author: 'Toby Bajrovic',
@@ -116,7 +116,7 @@ var data = {
         weekMovie: false
     }, {
         src: 'The+Mad+Hatter+-+Fan+Film(720p).mp4',
-        img: 'img/miniatures/ThemadHatter.png',
+        img: 'img/miniatures/theMadHatter.png',
         title: 'The Mad Hatter',
         duration: '6:16',
         author: 'Wolfspider Productions',
@@ -130,7 +130,7 @@ var data = {
         weekMovie: false
     }, {
         src: 'The+Flash+Lite+(comedy+fan+film)(720p).mp4',
-        img: 'img/miniatures/Theflashlite.png',
+        img: 'img/miniatures/TheFlashLite.png',
         title: 'The Flash Lite',
         duration: '10:14',
         author: 'The Chublin Brothers',
@@ -144,7 +144,7 @@ var data = {
         weekMovie: false
     }, {
         src: 'Clash+at+the+Cantina+(2014)+-+Star+Wars+Fan+Film(720p).mp4',
-        img: 'img/miniatures/clashatthecantina.png',
+        img: 'img/miniatures/clashAtTheCantina.png',
         title: 'Clash at the Cantina',
         duration: '4:45',
         author: 'Corey Vidal',
@@ -186,7 +186,7 @@ var data = {
         weekMovie: false
     }, {
         src: 'DON&#039;T+MOVE+-+A+Short+Horror+Film+(2017)(720p).mp4',
-        img: 'img/miniatures/fallout.png',
+        img: 'img/miniatures/Fallout.png',
         title: 'FALLOUT',
         duration: '7:27',
         author: 'AndrewProductionsTV',
@@ -257,7 +257,7 @@ var data = {
         weekMovie: false
     }, {
         src: '[Rebeler]+Madara+VS+Hashirama+-+Cosplay+Movie(720p).mp4',
-        img: 'img/miniatures/Rebels.png',
+        img: 'img/miniatures/rebels.png',
         title: 'Rebels : Madara VS Hashirama',
         duration: '8:06',
         author: 'Rebeler Team',
