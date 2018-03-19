@@ -16,8 +16,7 @@ function displayWeeklySelection() {
   })
   grid.innerHTML = movies;
   selectedCategory.innerHTML = 'Weekly Selection';
-  selection = document.querySelectorAll('.main__selection-container__grid > img');
-  displaySelection();
+  displaySelection(document.querySelectorAll('.main__selection-container__grid__img-container__play-sign-container'));
 }
 
 function displayFavorites() {
@@ -30,8 +29,7 @@ function displayFavorites() {
   grid.innerHTML = movies;
   selectedCategory.innerHTML = 'My Favorites';
   categoriesButton.classList.add('--hidden');
-  selection = document.querySelectorAll('.main__selection-container__grid > img');
-  displaySelection();
+  displaySelection(document.querySelectorAll('.main__selection-container__grid__img-container__play-sign-container'));
 }
 
 // ------------------ nav bar  ---------------------- //
@@ -76,8 +74,8 @@ var backButton = document.querySelector('.main__selected-movie__button');
 var video = document.querySelector('.main__selected-movie__video');
 var element;
 
-function displaySelection() {
-  selection.forEach(function(movie) {
+function displaySelection(fSelection) {
+  fSelection.forEach(function(movie) {
     movie.addEventListener('click', function(event) {
       element = this.previousSibling;
       var src = element.getAttribute('src');
@@ -100,8 +98,6 @@ function displaySelection() {
     })
   })
 }
-
-displaySelection();
 
 // ------------------ back to selection page button ---------------------- //
 
@@ -171,7 +167,6 @@ categories.forEach(function(category) {
     }
     selectedCategory.innerHTML = category;
     grid.innerHTML = movies;
-    selection = document.querySelectorAll('.main__selection-container__grid__img-container__play-sign-container');
-    displaySelection();
+    displaySelection(document.querySelectorAll('.main__selection-container__grid__img-container__play-sign-container'));
   })
 })
