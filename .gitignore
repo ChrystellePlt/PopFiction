@@ -1,4 +1,4 @@
-/img/*
+.DS_Store
 /.sass-cache/*
 /videos/*
-.DS_Store
+

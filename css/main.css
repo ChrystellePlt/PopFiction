@@ -23,7 +23,7 @@ html {
   height: 8vh;
   width: 100vw; }
   .header__logo-ctn {
-    margin-left: 2%;
+    margin: 14% 2% 0 0;
     width: 40%; }
     @media only screen and (min-width: 481px) {
       .header__logo-ctn {
@@ -525,6 +525,7 @@ html {
       color: #fff;
       font-size: 1.3rem;
       border: 1.5px solid #FDC00C;
+      background: #FDC00C;
       left: 0;
       right: 0;
       margin: 15% auto;
@@ -547,7 +548,7 @@ html {
           width: 20vw;
           font-size: 1.6rem; } }
     .main__selected-movie__button:hover {
-      background: #FDC00C;
+      background: #191919;
       cursor: pointer; }
   .main__week-selection-ctn > img {
     overflow: hidden;

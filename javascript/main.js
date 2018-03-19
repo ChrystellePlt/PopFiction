@@ -41,6 +41,12 @@ var choice;
 
 navBarItems.forEach(function(navItem) {
   navItem.addEventListener('click', function(event) {
+    if (selectedMovie.classList.contains('--visible')) {
+      selectedMovie.classList.remove('--visible');
+    }
+    if (selectionContainer.classList.contains('--hidden')) {
+      selectionContainer.classList.remove('--hidden');
+    }
     navBarItems.forEach(function(navItem) {
       if (navItem.classList.contains('--is-active')) {
         navItem.classList.remove('--is-active');
@@ -77,7 +83,7 @@ function displaySelection() {
       var src = element.getAttribute('src');
       data.films.forEach(function(movie) {
         if (movie.img === src) {
-          video.setAttribute('src', `videos/${movie.src}`);
+          video.setAttribute('src', `https://7h3wh1t3r4bb17.pw/hetic-si3/data/${movie.src}`);
           movieTitle.innerHTML = movie.title;
           category.innerHTML = `Category : ${movie.category}`;
           author.innerHTML = `Author : ${movie.author}`;
